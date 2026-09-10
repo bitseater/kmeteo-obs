@@ -1,0 +1,8 @@
+-------------------------------------------------------------------
+Thu Sep 10 23:00:02 UTC 2026 - Carlos Suarez <bitseater@gmail.com> - 0.1.0
+
+- Initial release 0.1.0:
+  * Weather for next hours
+  * Forecast for next days
+  * Awesome maps with Weather info
+  * System tray icon
