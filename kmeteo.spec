@@ -20,6 +20,7 @@ Name:           kmeteo
 Version:        0.1.0
 Release:        0
 Summary:        Program to show the weather forecast of the next hours and days
+%global debug_package %{nil}
 License:        GPL-3.0-or-later
 Group:          Productivity/Other
 URL:            https://gitlab.com/bitseater/kmeteo
@@ -62,26 +63,18 @@ Translation files for %{name}.
 %meson_install
 %find_lang io.gitlab.bitseater.kmeteo %{name}.lang
 
-# dirlist HiDPI icons (see: hicolor/index.theme)
-_dirlist=$PWD/dir.lst
-pushd %{buildroot}
-find ./ | while read _list; do
-    echo $_list | grep '[0-9]\@[0-9]' || continue
-    _path=$(echo $_list | sed 's/[^/]//')
-    if ! ls ${_path%/*}; then
-        grep -xqs "\%dir\ ${_path%/*}" $_dirlist || echo "%dir ${_path%/*}" >> $_dirlist
-    fi
-done
-popd
-
-%files -f dir.lst
+%files
 %license COPYING
 %doc AUTHORS README.md
 %{_bindir}/io.gitlab.bitseater.kmeteo
+%dir %{_datadir}/io.gitlab.bitseater.kmeteo
+%dir %{_datadir}/io.gitlab.bitseater.kmeteo/widgets
+%{_datadir}/io.gitlab.bitseater.kmeteo/*.py
+%{_datadir}/io.gitlab.bitseater.kmeteo/widgets/*.py
 %{_datadir}/applications/io.gitlab.bitseater.kmeteo.desktop
 %{_datadir}/icons/hicolor/*/*/io.gitlab.bitseater.kmeteo*.??g
-%{_datadir}/metainfo/io.gitlab.bitseater.kmeteo.appdata.xml
-%{_mandir}/man?/io.gitlab.bitseater.kmeteo.?%{ext_info}
+%{_datadir}/metainfo/io.gitlab.bitseater.kmeteo.metainfo.xml
+%{_mandir}/man1/io.gitlab.bitseater.kmeteo.*
 
 %files lang -f %{name}.lang
 
