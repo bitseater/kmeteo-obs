@@ -32,7 +32,7 @@ BuildRequires:  meson >= 0.40.0
 BuildRequires:  pkgconfig
 BuildRequires:  python3
 BuildRequires:  python3-PyQt6
-BuildRequires:  python3-PyQt6-qtwebengine
+BuildRequires:  python3-PyQt6-WebEngine
 BuildRequires:  python3-requests
 BuildRequires:  update-desktop-files
 Recommends:     %{name}-lang
