@@ -15,16 +15,16 @@
 # Please submit bugfixes or comments via http://bugs.opensuse.org/
 #
 
-
 Name:           kmeteo
 Version:        0.1.0
 Release:        0
 Summary:        Program to show the weather forecast of the next hours and days
-%global debug_package %{nil}
 License:        GPL-3.0-or-later
 Group:          Productivity/Other
-URL:            https://gitlab.com/bitseater/kmeteo
-Source:         https://gitlab.com/bitseater/kmeteo/-/archive/%{version}/%{name}-%{version}.tar.gz
+URL:            https://gitlab.com/bitseater/meteo
+Source0:        %{name}-%{version}.tar.gz
+
+%global debug_package %{nil}
 BuildRequires:  fdupes
 BuildRequires:  gettext
 BuildRequires:  hicolor-icon-theme

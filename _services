@@ -1,0 +1,6 @@
+<services>
+  <service name="download_url">
+    <param name="url">https://gitlab.com/bitseater/kmeteo/-/archive/0.1.0/kmeteo-0.1.0.tar.gz</param>
+    <param name="filename">kmeteo-0.1.0.tar.gz</param>
+  </service>
+</services>
