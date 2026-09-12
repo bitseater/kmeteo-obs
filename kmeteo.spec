@@ -21,7 +21,7 @@ Release:        0
 Summary:        Program to show the weather forecast of the next hours and days
 License:        GPL-3.0-or-later
 Group:          Productivity/Other
-URL:            https://gitlab.com/bitseater/meteo
+URL:            https://gitlab.com/bitseater/kmeteo
 Source0:        %{name}-%{version}.tar.gz
 
 %global debug_package %{nil}
